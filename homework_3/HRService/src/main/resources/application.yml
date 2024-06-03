@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: HRService
+
+grpc:
+  job-client:
+    address: JobService
+    port: 5010
+
+  cv-service:
+    address: CVService
+    port: 5011

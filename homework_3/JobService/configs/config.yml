@@ -1,0 +1,7 @@
+mongo:
+  database:
+    name: job-db
+    uri: mongodb://localhost:27017
+grpc:
+  host: localhost
+  port: 5000

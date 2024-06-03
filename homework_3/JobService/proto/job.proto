@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+service JobService {
+  rpc GetJob(JobRequest) returns (JobResponse) {}
+}
+
+message JobRequest {
+  int64 page = 1;
+}
+
+message Job {
+  string id = 1;
+  uint32 revenue = 2;
+  repeated string skills = 3;
+  string CompanyName = 4;
+}
+
+message JobResponse {
+  repeated Job jobList = 1;
+}
