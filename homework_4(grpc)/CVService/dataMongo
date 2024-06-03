@@ -1,0 +1,11 @@
+{
+  "_id": {
+    "$oid": "7b54234218939"
+  },
+  "Name": "Asgat",
+  "Age": 20,
+  "skills": [
+    "Java",
+    "Python"
+  ],
+}

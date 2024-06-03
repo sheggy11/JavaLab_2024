@@ -1,0 +1,4 @@
+mongo:
+  database:
+    name: CVDatabase
+    uri: mongodb://mongo:27017

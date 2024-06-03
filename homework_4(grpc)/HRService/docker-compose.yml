@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  hr-service:
+    container_name: "hr-service"
+    build:
+      context: HRService/.
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - microservices_network
+
+  cv-service:
+    container_name: "cv-service"
+    build:
+      context: CVService/.
+      dockerfile: Dockerfile
+    ports:
+      - "5010:5010"
+    networks:
+     - microservices_network
+
+  job-service:
+    container_name: "job-service"
+    build:
+      context: JobService/.
+      dockerfile: Dockerfile
+    ports:
+      - "5011:5011"
+    networks:
+     - microservices_network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - '27017:27017'
+    networks:
+     - microservices_network
+
+networks:
+  microservices_network:
+    driver: bridge
